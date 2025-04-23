@@ -1,0 +1,270 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-color-light: rgba(99, 102, 241, 0.2);
+    --primary-gradient: linear-gradient(to right, #4338ca, #6366f1);
+    --secondary-color: #818cf8;
+    --accent-color: #fb7185;
+    --light-color: #f3f4f6;
+    --dark-color: #1f2937;
+    --darker-color: #111827;
+    --card-bg: #1e293b;
+    --card-header: #0f172a;
+    --text-color: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border-radius: 10px;
+    --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    background: var(--darker-color);
+    background-image: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+}
+
+.card {
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    background: var(--card-header);
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+}
+
+.card-body {
+    padding: 25px;
+    color: var(--text-color);
+}
+
+.preview-container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-top: 10px;
+    border: 2px dashed #475569;
+    transition: all 0.3s ease;
+}
+
+.preview-container:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.preview-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#result-container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 2px dashed #475569;
+    transition: all 0.3s ease;
+}
+
+#result-container:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#result-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.bg-pattern {
+    background-color: var(--darker-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236366f1' fill-opacity='0.15' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    border: none;
+    box-shadow: 0 4px 15px rgba(78, 84, 200, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(78, 84, 200, 0.6);
+}
+
+.btn-success {
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    border: none;
+    box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(17, 153, 142, 0.6);
+}
+
+/* 特性图标圆圈 */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--card-header);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.icon-circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    background: linear-gradient(135deg, var(--card-header), var(--card-bg));
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.lead {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+    color: var(--text-color);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* 加载动画 */
+.spinner-border {
+    color: var(--primary-color) !important;
+}
+
+/* 页面标题 */
+h1 {
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--primary-gradient);
+    border-radius: 2px;
+}
+
+/* 页脚样式 */
+footer {
+    padding: 20px 0;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 40px !important;
+}
+
+/* 联系页面样式 */
+.contact-item {
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.contact-item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.contact-value {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.contact-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* 快速明显的高亮提示效果 */
+#instructions {
+    transition: all 0.2s ease-in-out;
+}
+
+.blink-card {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.9);
+    border: 2px solid #ffffff !important;
+    transform: translateY(-3px);
+}
